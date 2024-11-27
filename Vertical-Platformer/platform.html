@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Platformer</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+			background-image: url("./img/background.png");
+        }
+        body {
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .end-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 10; /* Ensure it appears on top of the canvas */
+        }
+        .end-screen img {
+            width: 80%;
+            max-width: 1000px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center;">
+        <canvas id="gameCanvas" width="1000" height="800"></canvas>
+    </div>
+    
+    <div class="end-screen">
+        <img src="./img/end-screen-image.jpg" alt="End Screen Image">
+    </div>
+
+    <script src="platformer.js"></script>
+</body>
+</html>
